@@ -1,0 +1,37 @@
+﻿<ArcGIS defaultAssembly="AddLayers.dll" defaultNamespace="AddLayers" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{948a6004-a89f-475f-b31c-1ac330656c7d}" version="1.0" desktopVersion="2.2.12813">
+    <Name>AddLayers</Name>
+    <Description>AddLayers description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Bradley.Jones</Author>
+    <Company>Acme</Company>
+    <Date>9/26/2018 12:19:03 PM, 2018</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="AddLayers_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="AddLayers_Tab1" caption="New Tab">
+          <group refID="AddLayers_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="Data" caption="Data Group" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="AddLayers" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="AddLayers" caption="Add Layers" className="AddLayers" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
